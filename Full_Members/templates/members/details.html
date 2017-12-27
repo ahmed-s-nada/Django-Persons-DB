@@ -21,7 +21,6 @@
         <p>Birthday: {{ single_member.birthDay }}</p>
         <p>Email: {{ single_member.Email }}</p>
         <p>Subscribtion: {{ single_member.Memebership_type }}</p>
-        {# <p>{{ single_member.profile_image }}</p>#}
         {% if  single_member.profile_image.url != ""%}
           <img src="{{ single_member.profile_image.url }}" hight= "300" width="400" alt=" where is the image?">
         {% else %}
