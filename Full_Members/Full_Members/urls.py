@@ -28,4 +28,5 @@ urlpatterns = [
     path('registeration/', include('registeration.urls')),
     path('admin/', admin.site.urls),
     path('logout/', user_logout, name= 'logout'),
+    path('places/', include('establishment.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

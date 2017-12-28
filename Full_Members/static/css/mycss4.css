@@ -26,6 +26,10 @@ body{
   margin: auto;
   font-weight: bold;
   color: white;
+  border-width: 3px;
+  border-radius: 45px;
+  border-style: groove;
+  border-color: red;
 }
 
 .mybg2{
@@ -70,4 +74,25 @@ label{
   color: red;
   /*font-weight: bold;*/
 
+}
+
+.about{
+  color: red;
+  background-color: azure;
+  border-color: red;
+  border-radius: 30;
+  border-width: 2px;
+  border-style: double;
+}
+
+textarea{
+  border-width: 3px;
+  border-radius: 45px;
+  border-style: groove;
+  border-color: red;
+  background-color: cyan;
+  text-align: center;
+  font-style: italic;
+  color: red;
+  box-shadow: 10px 10px 5px #888888;
 }

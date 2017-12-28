@@ -1,0 +1,57 @@
+{% extends "establishment/base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+      <div class="container mybg1">
+        <p></p>
+        <h2 class="mybg2">{{ single_establishment.Name }}</h2>
+
+        <p></p>
+        {% if single_establishment.Logo.url != '' %}
+          <img src="{{ single_establishment.Logo.url }}" hight= "100" width= "100" alt="">
+        {% else %}
+          <p>-------</p>
+        {% endif %}
+        <p></p>
+        <p>Grade: {{ single_establishment.Stars }} star</p>
+        <p>Establishment type: {{ single_establishment.Establishment_type }}</p>
+        <p>Adress: {{ single_establishment.Adress }}</p>
+        <p>Phone: {{ single_establishment.Phone }}</p>
+        <p> Web Site: <a href="{{ single_establishment.Web_Adress }}">{{ single_establishment.Web_Adress }}</a> </p>
+        <p> Email {{ single_establishment.Email }}</p>
+        {% if single_establishment.Main_Photo.url != '' %}
+          <img src="{{ single_establishment.Main_Photo.url }}" hight= "400" width="600" alt="">
+        {% endif %}
+        <p></p>
+        <h3>About: </h3>
+        <div class="container">
+
+          <textarea name="name" rows="6" cols="60" readonly>{{ single_establishment.About }}</textarea>
+
+          <p></p>
+        </div class="mybg4">
+        <p></p>
+        <a class="btn btn-warning " href="{% url 'establishment:Edit' pk=single_establishment.pk %}">Edit Place</a>
+        <a class="btn btn-danger" href="{% url 'establishment:Del' pk=single_establishment.pk %}">Delete!</a>
+
+      </div>
+      <div class="container">
+
+
+      </div>
+    {% endblock %}
+
+    </body>
+</html>
+
+{% endblock %}

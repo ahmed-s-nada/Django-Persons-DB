@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "establishment/base.html" %}
+{% load  staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+      {% for e in all_establishments  %}
+        <ol>
+        <li><a href="{{ e.id }}"> {{ e.Name }}</a></li>  
+        </ol>
+
+
+      {% endfor %}
+
+    {% endblock %}
+  </body>
+</html>

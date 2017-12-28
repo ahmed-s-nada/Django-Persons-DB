@@ -1,0 +1,20 @@
+{% extends "establishment/base.html" %}
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+      <h1 class="mybg1">Are you sure you want to DELETE {{ establishment.Name }} ?</h1>
+      <form class="container form-control mybg3" action="{% url 'establishment:Del' pk=establishment.pk %}" method="post">
+        {% csrf_token %}
+        <input type="Submit" class="btn btn-danger" value="Delete">
+        <a class="btn btn-primary" href="{% url 'establishment:Single' pk=establishment.pk %}">Cancel</a>
+      </form>
+
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "establishment/base.html" %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+  </head>
+  <body>
+    {% block body_block %}
+      <h1>
+        {% if not form.isnatce.pk %}
+          Add Establishment
+        {% else %}
+          Edit Establishment
+        {% endif %}
+      </h1>
+
+      <form class="container form-control mybg1" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary"  name="" value="submit">
+
+      </form>
+    {% endblock %}
+  </body>
+</html>

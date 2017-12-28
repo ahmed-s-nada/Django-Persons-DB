@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from members import forms
 from django.contrib.auth.decorators import login_required
-from django.views.generic import DetailView, ListView, FormView
+from django.views.generic import DetailView, ListView, FormView, CreateView, UpdateView, DeleteView
 from members.models import member
 
 # Create your views here.
 
 def home_page(request):
+    return render(request, 'home.html')
+
+def index(request):
     return render(request, 'members/index.html')
 
 @login_required
