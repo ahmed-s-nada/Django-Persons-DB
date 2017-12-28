@@ -9,8 +9,8 @@ urlpatterns = [
         path('', index, name= 'Index'),
         path('list/', listEstablishment.as_view(), name = 'List'),
         path('list/<int:pk>/', viewEstablishment.as_view(), name = 'Single'),
-        path('add/', addEstablishment.as_view(), name = 'Add'),
-        path('edit/<int:pk>/', editEstablishment.as_view(), name = 'Edit'),
-        path('del/<int:pk>/', delEstablishment.as_view(), name = 'Del'),
+        path('add/', login_required(addEstablishment.as_view() ), name = 'Add'),
+        path('edit/<int:pk>/', login_required(editEstablishment.as_view() ), name = 'Edit'),
+        path('del/<int:pk>/', login_required(delEstablishment.as_view() ), name = 'Del'),
 
 ]
