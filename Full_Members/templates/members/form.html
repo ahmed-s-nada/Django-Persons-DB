@@ -27,6 +27,11 @@
       {{ members.Last_Name }}
       {% csrf_token %}
 
+      {{ members.place.errors }}
+      <label class="mybg3" for="{{ members.Last_name.id_for_label }}">Work Place:</label>
+      {{ members.place }}
+      {% csrf_token %}
+
 
       {{ members.Gender.errors }}
       <label class="mybg4" for="{{ members.Gender.id_for_label }}">Gender:</label>
@@ -57,7 +62,7 @@
       {{ members.profile_image.errors }}
       <label class="mybg2" for="{{ members.profile_image.id_for_label }}">profile image:</label>
       {{ members.profile_image }}
-      
+
       <!-- {% csrf_token %} -->
 
 

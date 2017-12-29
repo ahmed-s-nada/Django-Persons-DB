@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from establishment.models import establishment
+
 
 # Create your models here.
 
@@ -16,6 +18,7 @@ class member(models.Model):
     User_Name = models.CharField(max_length = 12)
     First_Name = models.CharField(max_length = 16)
     Last_Name = models.CharField(max_length = 16)
+    place= models.ForeignKey(establishment, on_delete=None, default= 1)
     Gender = models.CharField(max_length = 4, choices = GENDER_CHOICES,default = MALE)
     birthDay= models.DateField(default = '07/07/1977')
     Email = models.EmailField(max_length= 128)

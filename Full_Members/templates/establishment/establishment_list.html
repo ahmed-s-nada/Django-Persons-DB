@@ -8,13 +8,15 @@
   </head>
   <body>
     {% block body_block %}
-      {% for e in all_establishments  %}
+
         <ol>
-        <li><a href="{{ e.id }}"> {{ e.Name }}</a></li>  
+          {% for e in all_establishments  %}
+            <li><a href="{{ e.id }}"> {{ e.Name }}</a></li>
+          {% endfor %}
         </ol>
 
 
-      {% endfor %}
+
 
     {% endblock %}
   </body>

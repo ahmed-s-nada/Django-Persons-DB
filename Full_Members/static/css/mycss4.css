@@ -14,7 +14,7 @@ body{
   padding-top: 36px;
   padding-bottom: 36px;
   background-image: url("http://www.dream-wallpaper.com/free-wallpaper/star-wallpaper/scarlett-johansson-wallpaper/1280x800/free-wallpaper-59.jpg") ;
-  background-size: cover;
+  background-size: auto;
   box-shadow: 10px 10px 5px #888888;
 }
 
